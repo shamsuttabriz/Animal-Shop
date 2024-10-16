@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peddy Shop</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Daisy UI styles -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Link -->
+    <script src="https://kit.fontawesome.com/d709f1b460.js" crossorigin="anonymous"></script>
+    <!-- Custom style file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="container md:w-full lg:w-8/12 mx-auto px-4 md:px-6 lg:px-0 py-5 relative">
+        <nav class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <img src="./images/logo.webp" alt="logo">
+                <span class="text-2xl md:text-3xl font-bold">Peddy</span>
+            </div>
+            <ul class="md:flex items-center gap-5 hidden">
+                <li><a class="text-lg font-normal text-slate-500 hover:text-slate-700" href="#">Home</a></li>
+                <li><a class="text-lg font-normal text-slate-500 hover:text-slate-700" href="#">Shop</a></li>
+                <li><a class="text-lg font-normal text-slate-500 hover:text-slate-700" href="#">Contact</a></li>
+            </ul>
+            <div id="toggle-nav" class="bg-slate-900 text-slate-400 w-full absolute top-16 left-0 p-6 rounded z-30 hidden md:hidden">
+                <ul class="flex flex-col gap-3">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <div class="w-8 h-8 rounded-full border border-slate-400 flex justify-center items-center text-slate-500 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                          </svg>                
+                    </div>
+                </ul>
+            </div>
+            <div class="w-9 h-9 rounded-full border border-slate-400 md:flex justify-center items-center text-slate-500 cursor-pointer hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                  </svg>                  
+            </div>
+            <div onclick="toggleNavbar()" class="cursor-pointer block md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+                </svg>                  
+            </div>
+        </nav>
+    </header>
+
+    <main class="container md:w-full lg:w-8/12 mx-auto px-4 md:px-6 lg:px-0">
+        <!-- Hero Section -->
+        <section class="max-w-xl mx-auto text-center px-8 md:px-0 py-12 md:py-20">
+            <div class="flex justify-center items-center gap-3">
+                <p class="text-lg font-medium text-slate-500">Bringing Families Together</p>
+                <img class="w-6" src="./images/fire.png" alt="Fire">
+            </div>
+            <h1 class="text-3xl md:text-5xl font-bold text-center leading-tight lg:leading-snug my-5">Your Path to Adoption <br> Starts Here</h1>
+            <p class="text-slate-600 text-sm text-center">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+            <div class="mt-10">
+                <a href="#down" class="rounded-md bg-[#0E7A81] px-4 py-3 text-white">View More</a>
+                <img class="max-w-full mt-10 md:mt-16" src="./images/pet.webp" alt="Pet">
+            </div>
+        </section>
+        <!-- Adopt your Best Friend Section -->
+        <section>
+            <div class="md:w-4/6 lg:w-8/12 mx-auto text-center mb-5 md:mb-20">
+                <h1 id="down" class="text-4xl md:text-5xl font-bold text-slate-800">Adopt Your Best Friend</h1>
+                <p class="text-slate-600 text-base text-center my-8 px-4 lg:px-12">
+                    Adopt your best friend today and experience the joy of unconditional love. Countless dogs and cats are waiting for a loving home. By adopting, you're not only saving a life but also gaining a loyal companion who will cherish you forever.
+                </p>
+            </div>
+            <!-- Category Part -->
+            <nav id="category-nav" class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 lg:gap-16 items-center justify-between my-6"></nav>
+            <!-- Sort By Price Nav -->
+            <nav class="flex md:flex-row justify-between items-center my-6">
+                <h1 class="text-xl md:text-2xl font-bold">Best Deal For You</h1>
+                <button onclick="handleSort()" class="btn rounded-md bg-[#0E7A81] text-white">Sort by Price</button>
+            </nav>
+            <!-- Spinner -->
+            <div id="spinner"></div>
+            <!-- All Peddy -->
+            <div id="remove-show" class="grid col-span-3 grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
+                <div id="all-pets" class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 col-span-2 md:col-span-2 lg:col-span-3"></div>
+                <div id="add-pets" class="border border-gray-300 p-2 lg:p-4 rounded-lg grid grid-cols-1 md:grid-cols-2 gap-2 auto-rows-min">
+                </div>
+            </div>
+        </section>
+        <!-- Modal Container -->
+        <div id="modal-details-container"></div>
+        <div id="modal-count-container"></div>
+    </main>
+            
+    <footer class="bg-slate-900 ">
+        <div class="container md:w-full lg:w-8/12 mx-auto px-4 md:px-6 lg:px-0 footer justify-center md:justify-between text-neutral-content py-16">
+            <nav>
+                <div class="flex items-center gap-2">
+                    <img src="./images/logo.webp" alt="logo">
+                    <span class="text-2xl md:text-3xl font-bold">Peddy</span>
+                </div>
+                <div class="leading-6 my-3">
+                    Location: av. Washington 165, NY CA 54003 <br>
+                    Phone: +31 85 964 47 25 <br>
+                    Email: info@yourdomain.com <br>
+                    Openings hours: 9.00 AM - 5.00 PM <br>
+                </div>
+                <div class="flex flex-row items-center gap-4">
+                    <a href="#"><img class="w-8" src="./images/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img class="w-8" src="./images/twitter.png" alt="Facebook"></a>
+                    <a href="#"><img class="w-8" src="./images/youtube.png" alt="Facebook"></a>
+                    <a href="#"><img class="w-8" src="./images/insta.png" alt="Facebook"></a>
+                </div>
+            </nav>
+            <nav>
+              <h6 class="text-xl font-bold text-slate-300 mb-4">Useful Links</h6>
+              <a href="#" class="link link-hover text-slate-500 text-base">Home</a>
+              <a href="#" class="link link-hover text-slate-500 text-base">About us</a>
+              <a href="#" class="link link-hover text-slate-500 text-base">Animals</a>
+              <a href="#" class="link link-hover text-slate-500 text-base">Foundation</a>
+              <a href="#" class="link link-hover text-slate-500 text-base">Contact</a>
+            </nav>
+            <nav>
+                <h6 class="text-xl font-bold text-slate-300 mb-4">Drop a Message</h6>
+                <input type="email" placeholder="Enter your email" class="input input-bordered w-full max-w-xs bg-slate-800 rounded-lg" />
+                <button class="btn border-0 rounded-lg bg-[#0E7A81] text-white w-full mt-1">Subscribe</button>
+              </nav>
+        </div>
+    </footer>
+
+    <!-- Script Files -->
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/toggleNavbar.js"></script>
+</body>
+</html>
