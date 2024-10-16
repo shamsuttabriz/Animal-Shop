@@ -1,4 +1,4 @@
-<h2 style="text-align:center; font-size:50px;">Peddy Shop</h2>
+# <p style="text-align: center;">A Peddy Shop</p>
 
 [![An old rock in the desert](./images/markdown-image.png "This is a beautiful peddy shop for all cute person")](https://sh-peddy-shop.netlify.app/)
 
